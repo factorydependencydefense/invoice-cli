@@ -1,0 +1,26 @@
+{
+  "name": "invoice-cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Command line tool that turns usage records into invoice batches.",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "invoice": "bin/invoice.js"
+  },
+  "scripts": {
+    "build": "esbuild bin/invoice.js --bundle --platform=node --packages=external --outfile=dist/invoice.js",
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "chalk": "6.0.1",
+    "commander": "15.0.0",
+    "lodash": "4.17.10",
+    "moment": "2.31.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
