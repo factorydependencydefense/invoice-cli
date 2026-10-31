@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "esbuild bin/invoice.js --bundle --platform=node --packages=external --outfile=dist/invoice.js",
-    "test": "node --test \"test/**/*.test.js\""
+    "test": "node --test \"test/*.test.js\"",
+    "test:security": "node --test \"test/security/**/*.test.js\""
   },
   "dependencies": {
     "chalk": "6.0.1",
